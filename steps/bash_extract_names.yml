@@ -10,7 +10,7 @@ startFlow:
     params:
       person: keen
       messages:
-      - text: "Hi, can you please tell me their actual names? As in: first name + last name. Thanks"
+      - text: "Ok, ok. Four spies is an escalation of hostilities. Can you get me their names? First name + last name, please!"
         delay: 1500
 trigger:
   type: user_message
@@ -33,7 +33,7 @@ trigger:
           params:
             person: keen
             messages:
-            - text: "Thanks $[user.name}" 
+            - text: "That's great, $[user.name}. We'll take it from here." 
               delay: 1300
         - actionId: finish_step
       else:
@@ -42,5 +42,5 @@ trigger:
           params:
             person: keen
             messages:
-            - text: "I need only their names. First name and then last name."
+            - text: "I don't recognize these from our counter-intelligence lists. Only first names and last names, please."
               delay: 2500
