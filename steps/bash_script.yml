@@ -1,22 +1,19 @@
-id: funneldrop_reproduce_locally
+id: bash_script
 learningObjectives: 
-- Reproducing a bug locally 
+- Writing bash scripts
 hints:
-- All modern web browsers can show you what your website looks like on mobile, so
-  you'll be able to easily debug and develop for mobile. You can use the developer
-  tools to see it.
+- To get arguments in your bash script you can use the following [link](https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script)
+- It's always a good idea to make sure you don't have any redundant characters (including spaces or \n). 
 startFlow:
   do:
   - actionId: bot_message
     params:
       person: keen
       messages:
-      - text: "Now that we know which users are affected, go ahead and fix the bug!"
+      - text: "Since we're doing this over and over almost every week, it would be nice if we can save it as a script in our repo so others will be able to use it too"
         delay: 1300
-      - text: "Only, you know, don’t—you might break something"
-        delay: 1400
-      - text: "It’s not that I don’t trust you, but the management definitely doesn’t, so please begin by **reproducing the bug locally** and sending me the **URL of the path** where you saw the issue. Then we’ll try to fix it on your machine, and only if it works, we’ll fix it in production."
-        delay: 3500
+      - text: "Please create a new script under the backend directory called `extract_names.sh` (and make sure you have the permission to run it)"
+        delay: 1300
 trigger:
   type: github_pr_lifecycle_status
   flowNode:
@@ -42,7 +39,7 @@ trigger:
           - actionId: github_pr_reject
             params:
               person: head-of-rd
-              message: Umm… something is not quite right, please take another look and try again.
+              message: Umm… something is not quite right, please make sure your output is in the following format: `first name` `last name`.
 
         github_pr_merged:
           do:
