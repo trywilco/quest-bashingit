@@ -18,30 +18,37 @@ startFlow:
       - text: "It’s not that I don’t trust you, but the management definitely doesn’t, so please begin by **reproducing the bug locally** and sending me the **URL of the path** where you saw the issue. Then we’ll try to fix it on your machine, and only if it works, we’ll fix it in production."
         delay: 3500
 trigger:
-  type: user_message
-  params: 
-    person: keen
+  type: github_pr_lifecycle_status
   flowNode:
-    if:
-      conditions:
-      - conditionId: text_match_regex
-        params:
-          text: "${userMessageText}"
-          regex: ".*localhost.*@"
-      then:
-        do:
-        - actionId: bot_message
-          params:
-            person: keen
-            messages:
-            - text: "Wow, that is indeed a problematic screen! Looks like we forgot about mobile devices when we created this screen."
-              delay: 1500
-        - actionId: finish_step
-      else:
-        do:
-        - actionId: bot_message
-          params:
-            person: keen
-            messages:
-            - text: "Umm, that doesn't look right. Maybe it's a different URL?"
-              delay: 1400
+    switch:
+      key: ${eventType}
+      cases:
+        github_pr_opened:
+          do:      
+          - actionId: github_pr_comment
+            params:
+              person: head-of-rd
+              message: Lovely. Let me take a look.
+              
+        github_pr_workflow_complete_success:
+          do:
+          - actionId: github_pr_approve
+            params:
+              person: head-of-rd
+              message: Amazing, that will save us tons of work.
+              
+        github_pr_workflow_complete_failure:
+          do:
+          - actionId: github_pr_reject
+            params:
+              person: head-of-rd
+              message: Umm… something is not quite right, please take another look and try again.
+
+        github_pr_merged:
+          do:
+          - actionId: finish_step
+
+
+githubActions:
+  backend:
+    testFile: check.sh
