@@ -27,21 +27,21 @@ trigger:
           do:      
           - actionId: github_pr_comment
             params:
-              person: head-of-rd
+              person: keen
               message: Lovely. Let me take a look.
               
         github_pr_workflow_complete_success:
           do:
           - actionId: github_pr_approve
             params:
-              person: head-of-rd
+              person: keen
               message: Amazing, that will save us (meaning you) tons of work.
               
         github_pr_workflow_complete_failure:
           do:
           - actionId: github_pr_reject
             params:
-              person: head-of-rd
+              person: keen
               message: Umm, something is not quite right, please make sure your output is in the following format: `first name` `last name`.
 
         github_pr_merged:
