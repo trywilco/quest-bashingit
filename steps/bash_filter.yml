@@ -1,0 +1,49 @@
+id: bash_filter
+learningObjectives: 
+- Recognise a correct file format that can be manipulated through bash. Read from a file and learn at least one bash command that can search it for a specific string or symbol
+hints:
+- Some file formats can not be manipulated through bash
+- Not sure everybody knows to spell their emails with lower case letters
+startFlow: 
+  do:
+  - actionId: bot_message
+    params:
+      person: keen
+      messages:
+      - text: "Hi ${user.name}, it seems we have a mole from Amazone in the system. I'm sending you a link to a file with our users, can you please tell many how many of them have an email with a @amazone addrees?"
+  - actionId: bot_message
+    params:
+      person: luca
+      messages:
+      - text: "Hi $[user.name), what's up? Product are harassing me about this mole thing. They've been asking the same thing every week for the past month. Can you please create a bash script or something so we wouldn't have to do it manually every time? Thanks for taking this, it would really help me as I'm not available for this right now." 
+trigger:
+  type: user_message
+  params: 
+    person: keen
+  flowNode:
+    if:
+      conditions:
+      - conditionId: text_contains_strings
+        params:
+          text: "${userMessageText}"
+          strings:
+          -4
+          -Four
+          -four
+      then:
+        do:
+        - actionId: bot_message
+          params:
+            person: keen
+            messages:
+            - text: "Thanks mate." 
+              delay: 1300
+        - actionId: finish_step
+      else:
+        do:
+        - actionId: bot_message
+          params:
+            person: keen
+            messages:
+            - text: "Are you sure? This doesn't make sense..."
+              delay: 2500
