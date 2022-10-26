@@ -15,7 +15,7 @@ startFlow:
       - text: "Hi ${user.firstName}. This is something I used to bug Carl with, but now that you're in his seat, I guess it's your job. Amazon employees are apparently snooping around, looking to steal our innovations.  Here's a [file](https://docs.google.com/spreadsheets/d/1fYT7vLFdgEbPKCNxJ0lY3esgEPSSkRhsajhNHf_rA4I) with today's sign ups, please tell me how many of them have an @amazon.com email."
   - actionId: bot_message
     params:
-      person: luca
+      person: lucca
       messages:
       - text: "Hi ${user.firstName}, just FYI, you're getting that mole finding job not because Carl had it but because everyone at Product got tired of doing it manually. We have mole hunts, like, every week. Comes with the popularity, I guess. My advice for you is to create some sort of a script, because it aint gonna be a one-time thing. From what I remember, bash can be very effective for these kinds of small tasks." 
 trigger:
