@@ -10,12 +10,12 @@ startFlow:
     params:
       person: keen
       messages:
-      - text: "Hi ${user.name}, it seems we have a mole from Amazone in the system. Here's a [link](https://docs.google.com/spreadsheets/d/1fYT7vLFdgEbPKCNxJ0lY3esgEPSSkRhsajhNHf_rA4I) to a file with our users, can you please tell many how many of them have an email with a Amazon.com addrees?"
+      - text: "Hi ${user.name}. This is something I used to bug Carl with, but now that you're in his seat, I guess it's your job. Amazon employees are apparently snooping around, looking to steal our innovations.  Here's a [file](https://docs.google.com/spreadsheets/d/1fYT7vLFdgEbPKCNxJ0lY3esgEPSSkRhsajhNHf_rA4I) with today's sign ups, please tell me how many of them have an @Amazon.com email."
   - actionId: bot_message
     params:
       person: luca
       messages:
-      - text: "Hi $[user.name), what's up? Product are harassing me about this mole thing. They've been asking the same thing every week for the past month. Can you please create a bash script or something so we wouldn't have to do it manually every time? Thanks for taking this, it would really help me as I'm not available for this right now." 
+      - text: "Hi $[user.name), just FYI, you're getting that mole finding job not because Carl had it but because everyone at Product got tired of doing it manually. We have mole hunts, like, every week. Comes with the popularity, I guess. My advice for you is to create some sort of a script, because it aint gonna be a one-time thing. From what I remember, bash can be very effective for these kinds of small tasks." 
 trigger:
   type: user_message
   params: 
