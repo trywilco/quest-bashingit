@@ -33,7 +33,7 @@ trigger:
           params:
             person: keen
             messages:
-            - text: "That's great, $[user.name}. We'll take it from here." 
+            - text: "That's great, $[user.firstName}. We'll take it from here." 
               delay: 1300
         - actionId: finish_step
       else:
