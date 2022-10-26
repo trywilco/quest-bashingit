@@ -3,6 +3,8 @@ learningObjectives:
 - Recognise a correct file format that can be manipulated through bash. Read from a file and learn at least one bash command that can search it for a specific string or symbol
 hints:
 - Some file formats can not be manipulated through bash
+- If you are not sure how to use a command you can use the manual. Type 'man nameOfCommand' for example, man cat would open the manual for the cat command
+- You can use severl commands together by utilizing the sign | (pipe)
 - Not sure everybody knows to spell their emails with lower case letters
 startFlow: 
   do:
