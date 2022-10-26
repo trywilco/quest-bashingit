@@ -10,7 +10,7 @@ startFlow:
     params:
       person: keen
       messages:
-      - text: "Hi ${user.name}. This is something I used to bug Carl with, but now that you're in his seat, I guess it's your job. Amazon employees are apparently snooping around, looking to steal our innovations.  Here's a [file](https://docs.google.com/spreadsheets/d/1fYT7vLFdgEbPKCNxJ0lY3esgEPSSkRhsajhNHf_rA4I) with today's sign ups, please tell me how many of them have an @Amazon.com email."
+      - text: "Hi ${user.name}. This is something I used to bug Carl with, but now that you're in his seat, I guess it's your job. Amazon employees are apparently snooping around, looking to steal our innovations.  Here's a [file](https://docs.google.com/spreadsheets/d/1fYT7vLFdgEbPKCNxJ0lY3esgEPSSkRhsajhNHf_rA4I) with today's sign ups, please tell me how many of them have an @amazon.com email."
   - actionId: bot_message
     params:
       person: luca
