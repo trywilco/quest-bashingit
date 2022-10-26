@@ -15,7 +15,7 @@ startFlow:
         delay: 1300
       - text: "Please create a new script under the backend directory called `extract_names.sh` (and make sure you have the permission to run it)"
         delay: 1300
-      - text: "The script should take in a file as an argument and print the result to a txt file". Open a PR when you're done.
+      - text: "The script should take in a file as an argument and print the result to a txt file. Open a PR when you're done."
         delay: 1300
 trigger:
   type: github_pr_lifecycle_status
