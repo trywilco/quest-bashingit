@@ -23,10 +23,10 @@ trigger:
         params:
           text: "${userMessageText}"
           strings:
-          - - Brad Pertrew
-            - Amjad Halil
-            - Ken Hatake
-            - Elisabeth Perl
+          - - "Brad Pertrew"
+            - "Amjad Halil"
+            - "Ken Hatake"
+            - "Elisabeth Perl"
       then:
         do:
         - actionId: bot_message
