@@ -2,9 +2,9 @@ id: bash_script
 learningObjectives: 
 - Writing bash scripts
 hints:
+- In order to allow someone else to use your script you would want to make it exectutable. You can find instructions here [link](https://www.andrewcbancroft.com/blog/musings/make-bash-script-executable/)
 - To get arguments in your bash script you can use the following [link](https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script)
 - It's always a good idea to make sure you don't have any redundant characters (including spaces or \n). 
-- In order to allow someone else to use your script you would want to make it exectutable. You can find instructions here [link](https://www.andrewcbancroft.com/blog/musings/make-bash-script-executable/)
 startFlow:
   do:
   - actionId: bot_message
