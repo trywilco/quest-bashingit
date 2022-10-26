@@ -11,11 +11,11 @@ startFlow:
     params:
       person: keen
       messages:
-      - text: "Since we're doing this over and over again almost every week, it would be nice if we can save it as a script in our repo, so others will be able to use it too"
+      - text: "So Luca spilled the beans about telling you that this is something we do all the time, and from what I understand, you're doing it using a script. Great. Would be nice to be able to save it in our repo so that others can do it too."
         delay: 1300
       - text: "Please create a new script under the backend directory called `extract_names.sh` (and make sure you have the permission to run it)"
         delay: 1300
-      - text: "The script should take in a file as an argument and print the result to a txt file"
+      - text: "The script should take in a file as an argument and print the result to a txt file". Open a PR when you're done.
         delay: 1300
 trigger:
   type: github_pr_lifecycle_status
@@ -35,14 +35,14 @@ trigger:
           - actionId: github_pr_approve
             params:
               person: head-of-rd
-              message: Amazing, that will save us tons of work.
+              message: Amazing, that will save us (meaning you) tons of work.
               
         github_pr_workflow_complete_failure:
           do:
           - actionId: github_pr_reject
             params:
               person: head-of-rd
-              message: Umm… something is not quite right, please make sure your output is in the following format: `first name` `last name`.
+              message: Umm, something is not quite right, please make sure your output is in the following format: `first name` `last name`.
 
         github_pr_merged:
           do:
