@@ -51,4 +51,5 @@ trigger:
 
 githubActions:
   backend:
-    testFile: check.sh
+    testFile: check.js
+    cmd: "./check.js"
