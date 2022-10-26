@@ -8,7 +8,7 @@
 
 
 ## Overview 
-The product team is looking for a mole in a huge list of users. The player needs to write a bash script to find the culprit and export a file with the requested details.
+Sometimes, the Product department comes to you with a monumental challenge only you can solve. Too often, though, what they need is something small — and inexplicably, they ask for it once every few days. You can do it manually every, of course, but that romance novel that’s your way out of the industry won’t write itself. Thankfully, there’s bash scripting.
 
 
 ## Outline
