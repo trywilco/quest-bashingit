@@ -10,7 +10,7 @@ startFlow:
     params:
       person: keen
       messages:
-      - text: "Hi ${user.name}, it seems we have a mole from Amazone in the system. I'm sending you a link to a file with our users, can you please tell many how many of them have an email with a @amazone addrees?"
+      - text: "Hi ${user.name}, it seems we have a mole from Amazone in the system. Here's a [link](https://docs.google.com/spreadsheets/d/1fYT7vLFdgEbPKCNxJ0lY3esgEPSSkRhsajhNHf_rA4I) to a file with our users, can you please tell many how many of them have an email with a Amazon.com addrees?"
   - actionId: bot_message
     params:
       person: luca
