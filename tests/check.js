@@ -31,4 +31,5 @@ if [ `cat output_names.txt | wc -l` -ne "2" ]; then
   exit 1;
 fi
 
+echo "looking good!"
 exit 0;
