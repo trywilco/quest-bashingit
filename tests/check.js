@@ -1,5 +1,10 @@
 #!/bin/sh
 
+ls
+ls ./backend
+ls ./backend/scripts
+ls ./backend/scripts/extract_names.sh
+
 echo "id,last name,first name,email,price,country" > input.txt
 echo "ff638a0a-0abc-4681-95c4-648953e65a9b,Sk,Ri,rskep7z@de.vu,100,US" >> input.txt
 echo "0e686244-d4b3-4c92-ad29-ee72dd999114,Last,First,pmarmyon80@amazon.com,100,US" >> input.txt
