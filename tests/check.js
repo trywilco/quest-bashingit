@@ -27,7 +27,7 @@ if ! grep -q Wilco output_names.txt; then
 fi
 
 if [ `cat output_names.txt | wc -l` -ne "2" ]; then
-  echo "Should have find 2 users in the input";
+  echo "Should have found 2 users in the input";
   exit 1;
 fi
 
