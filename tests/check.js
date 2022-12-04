@@ -15,14 +15,8 @@ bash ./scripts/extract_names.sh input.txt output_names.txt
 echo "Output:"
 cat output_names.txt
 
-if ! grep -q Roger output_names.txt; then
-  echo "didn't find Roger in the list";
-  exit 1;
-fi
-
-
-if ! grep -q Wilco output_names.txt; then
-  echo "didn't find Wilco in the list";
+if ! grep -q "Roger Wilco" output_names.txt; then
+  echo "didn't find Roger Wilco in the list";
   exit 1;
 fi
 
