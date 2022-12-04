@@ -4,7 +4,7 @@ learningObjectives:
 hints:
 - Some file formats can not be manipulated through bash
 - If you are not sure how to use a command you can use the manual. Type 'man nameOfCommand' for example, man cat would open the manual for the cat command
-- You can use severl commands together by utilizing the sign | (pipe)
+- You can use several commands together by utilizing the sign | (pipe)
 - Not sure everybody knows to spell their emails with lower case letters
 startFlow: 
   do:
