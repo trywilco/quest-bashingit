@@ -13,7 +13,7 @@ startFlow:
       messages:
       - text: "So Luca spilled the beans about telling you that this is something we do all the time, and from what I understand, you're doing it using a script. Great. Would be nice to be able to save it in our repo so that others can do it too."
         delay: 1300
-      - text: "Please create a new script under the backend directory called `extract_names.sh` (and make sure you have the permission to run it)"
+      - text: "Please create a new script under the scripts directory in the backend directory called `extract_names.sh` (and make sure you have the permission to run it)"
         delay: 1300
       - text: "The script should take in a file as an argument and print the result to a txt file. Open a PR when you're done."
         delay: 1300
