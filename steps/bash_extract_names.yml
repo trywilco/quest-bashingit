@@ -25,7 +25,7 @@ trigger:
           strings:
           - - "Brad Pertrew"
             - "Amjad Halil"
-            - "Ken Hatake"
+            - "Hatake Ken"
             - "Elisabeth Perl"
       then:
         do:
