@@ -7,7 +7,7 @@ steps:
 - bash_filter
 - bash_extract_names
 - bash_script
-duration: 1.5
+duration: 0.5
 skills:
 - DevOps
 - Operations
