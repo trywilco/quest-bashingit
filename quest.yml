@@ -13,3 +13,10 @@ skills:
 - Operations
 questDependency: docker_localsetup
 slogan: Everything Works If You Bash It Hard Enough
+  questFinished:
+    person: head-of-rd
+    messages:
+    - text: What a fine job you did today! Now all that is left is to choose your next task:
+      delay: 3000
+      components:
+      - type: schedule_learning_time
