@@ -52,4 +52,5 @@ trigger:
 githubActions:
   backend:
     testFile: "check.js"
-    cmd: "bash ${testFile}"
+    cmd:
+    - "bash ${testFile}"
