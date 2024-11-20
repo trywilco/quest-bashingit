@@ -14,3 +14,5 @@ skills:
 - Operations
 questDependency: docker_localsetup
 slogan: Everything Works If You Bash It Hard Enough
+repository: https://github.com/trywilco/Anythink-Market-Public
+
