@@ -1,0 +1,28 @@
+id: codespace_start
+learningObjectives:
+  - Running codespace
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: keen
+        messages:
+          - text: "Before we continue, please **[open your new Codespace virtual dev environment](${platform.baseUrl}/my-codespace)** or click on Codespace from the Wilco Chat side menu."
+          - text: "Please remember, your Codespace (virtual machine) can go idle. You can restart your Codespace by going into your Codespace and clicking restart."
+            delay: 1400
+    - actionId: ready_message
+      params:
+        person: keen
+
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: keen
+          messages:
+            - text: "Cool. let's move on!"
+              delay: 500
+      - actionId: finish_step
